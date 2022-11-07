@@ -1,16 +1,9 @@
-s = input()
-characters = {}
+regex_integer_in_range = r"_________"	# Do not delete 'r'.
+regex_alternating_repetitive_digit_pair = r"_________"	# Do not delete 'r'.
 
-for x in s:
-    if x not in characters:
-        characters[x] = 1
-    else:
-        characters[x] += 1
 
-# print(list(characters.items()))
-# print(characters.values())
+import re
+P = input()
 
-lst_characters = sorted(list(characters.items()))
-lst_characters_rev_value = sorted([ (v,k) for k,v in lst_characters ])
-lst_characters = [ (k,v) for v,k in lst_characters_rev_value ]
-print(lst_characters)
+print (bool(re.match(regex_integer_in_range, P)) 
+and len(re.findall(regex_alternating_repetitive_digit_pair, P)) < 2)
