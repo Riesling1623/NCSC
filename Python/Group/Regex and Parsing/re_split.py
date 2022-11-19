@@ -1,4 +1,4 @@
-regex_pattern = r"\W"
+regex_pattern = r"\W+"
 '''
 \W : Returns a match where the string DOES NOT contain any word characters
 (a-Z, 0-9, and underscore)
@@ -8,4 +8,6 @@ regex_pattern = r"\W"
 '''
 
 import re
-print("\n".join(re.split(regex_pattern, input())))
+print(re.split(regex_pattern, input()))
+# print("\n".join(re.split(regex_pattern, input())))
+# 100,000,000.000
